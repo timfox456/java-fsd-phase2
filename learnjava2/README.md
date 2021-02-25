@@ -3,7 +3,9 @@
 ## Database
 
 
-You will need to install mysql.
+You will need to install MySQL or MariaDB.
+
+One alternative to this if you lack admin permissions is [XAMPP](https://www.apachefriends.org/download.html).
 
 
 #### Creating a database and user
@@ -39,3 +41,9 @@ insert into `db_example.user` (id, email, name, password) values (2, 'someemail@
 ```sql
 select * from user;
 ```
+
+#### MYSQL Root Password Reset
+
+Here's what to do if you run windows and have to reset your root password:
+
+[How to Reset Root Password](https://dev.mysql.com/doc/mysql-windows-excerpt/5.7/en/resetting-permissions-windows.html)
