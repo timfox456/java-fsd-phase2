@@ -19,4 +19,11 @@ public class JDBCTests {
         JDBCExample example = new JDBCExample();
         example.TestSelect();
     }
+
+    @Test
+    public void TestCreate()
+    {
+        JDBCExample example = new JDBCExample();
+        example.TestCreate();
+    }
 }

@@ -73,4 +73,46 @@ public class JDBCExample {
         }
     }
 
+
+    public void TestCreate()
+    {
+        DBConnection conn = null;
+
+        try {
+            conn = new DBConnection(url, userName, passWord);
+            System.out.println("DB Connection initialized");
+
+            Statement stmt = conn.getConnection().createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+
+            stmt.executeUpdate("CREATE TABLE user (\n" +
+                    "  `id` int NOT NULL,\n" +
+                    "  `email` varchar(255) DEFAULT NULL,\n" +
+                    "  `name` varchar(255) DEFAULT NULL,\n" +
+                    "  `password` varchar(255) DEFAULT NULL,\n" +
+                    "  PRIMARY KEY (`id`)\n" +
+                    ")");
+
+
+            stmt.close();
+
+
+
+            conn.closeConnection();
+            System.out.println("DB Connection closed.");
+        }
+        catch (Exception ex) {
+            System.err.println(ex);
+        }
+        finally {
+            if (conn != null) {
+                try {
+
+                    conn.closeConnection();
+                }
+                catch (Exception ex) {
+                    System.err.println(ex);
+                }
+            }
+        }
+    }
 }
