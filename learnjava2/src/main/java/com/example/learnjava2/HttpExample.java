@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.net.URLConnection;
 import java.nio.charset.StandardCharsets;
 
 public class HttpExample {
@@ -32,6 +33,11 @@ public class HttpExample {
     public void doPost() {
         try {
             URL url = new URL("http://ptsv2.com/");
+            URLConnection con = url.openConnection();
+            HttpURLConnection http = (HttpURLConnection)con;
+            http.setRequestMethod("POST"); // PUT is another valid option
+            http.setDoOutput(true);
+
             String postData = new String("{\"rating\":10,\"user\":\"tim\",\"comments\":\"Awesome\"}");
             System.out.println("length = " + postData.getBytes().length);
             HttpURLConnection conn =  (HttpURLConnection) url.openConnection();
