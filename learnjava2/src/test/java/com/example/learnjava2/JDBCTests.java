@@ -11,4 +11,12 @@ public class JDBCTests {
         JDBCExample example = new JDBCExample();
         example.TestConnection();
     }
+
+
+    @Test
+    public void TestSelect()
+    {
+        JDBCExample example = new JDBCExample();
+        example.TestSelect();
+    }
 }
