@@ -29,6 +29,8 @@ As a part of developing an e-commerce web application, the admin backend require
 
 ```sql
 CREATE DATABASE pets;
+create user 'springuser'@'%' identified by 'ThePassword'; -- Creates the user springuser
+grant all on pets.* to 'springuser'@'%'; -- Gives all privileges to the new user on the newly created database
 ```
 
 ```sql
