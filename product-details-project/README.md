@@ -25,3 +25,25 @@ As a part of developing an e-commerce web application, the admin backend require
  * If the product is found, the servlet will display the product details, otherwise it will show an error message
  * Document the step-by-step process involved in completing this task
 
+## Suggested SQL
+
+```sql
+CREATE DATABASE pets;
+```
+
+```sql
+CREATE TABLE pets.products (
+id  int(11) AUTO_INCREMENT, 
+name VARCHAR(256), 
+color VARCHAR(256), 
+price DECIMAL(19,2),
+PRIMARY KEY (`id`)
+);
+
+INSERT INTO pets.products (name,color,price) VALUES ("Bird", "Chartreuse", 200.00);
+INSERT INTO pets.products (name,color,price) VALUES ("Hamster", "Brown", 30.00);
+INSERT INTO pets.products (name,color,price) VALUES ("Cayman", "Neon Pink", 500.00);
+INSERT INTO pets.products (name,color,price) VALUES ("Tarantula", "Red", 100.00);
+```
+
+
