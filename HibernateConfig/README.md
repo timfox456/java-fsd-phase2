@@ -10,13 +10,7 @@ This section will guide you to:
 Development Environment
  * Eclipse IDE for Enterprise Java Developers v2019-03 (4.11.0)
  * Apache Tomcat Server v9.0
- * JRE: OpenJDK Runtime Environment 11.0.2
- * Hibernate for Java 5.2.1
- * MySQL Connector for Java 8.0.16
- * JTA  v 1.1
- * Java XML Bind (no version)
- * JAXB OSGI v.2.4.0
- * Java Activation (no version)
+ 
  
 #### Step 3.1.1: Creating a Maven project
  * 	Open Eclipse 
@@ -129,6 +123,22 @@ grant all on ecommerce.* to 'springuser'@'%'; -- Gives all privileges to the new
  
  ```
  
+ You will also need to create the eproduct table:
+ 
+ ```sql
+ CREATE TABLE eproduct (ID bigint primary key auto_increment,
+ name varchar(100), price decimal(10,2), date_added timestamp default now()) 
+ ```
+ 
+ Let us also insert some rows into the eproduct table:
+ 
+ ```sql
+ use ecommerce;
+INSERT INTO eproduct (name, price, date_added) VALUES( 'HP Laptop ABC', 12000, '2021-03-01') ;
+INSERT INTO eproduct (name, price, date_added) VALUES( 'Acer Laptop ABC', 14000, '2021-03-01') ;
+INSERT INTO eproduct (name, price, date_added) VALUES( 'Lenovo Laptop ABC', 12000, '2021-03-01') ;
+ 
+```
  
 #### Step 3.1.4: Editing the `index.jsp` file
  * Find `index.jsp` that was created by the maven archtetype.  It should be under your "Deployed Resources"
