@@ -25,20 +25,22 @@ CREATE TABLE db_example.user (
   `name` varchar(255) DEFAULT NULL,
   `password` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-)
+);
 ```
 
 #### Inserting some data
 
 ```sql
-insert into `db_example.user` (id, email, name, password) values (1, 'someemail@someemailprovider.com', 'First', 'mypassword');
-insert into `db_example.user` (id, email, name, password) values (2, 'someemail@someemailprovider.com', 'Second', 'mypassword2');
+use db_example;
+insert into db_example.user (id, email, name, password) values (1, 'someemail@someemailprovider.com', 'First', 'mypassword');
+insert into db_example.user (id, email, name, password) values (2, 'someemail@someemailprovider.com', 'Second', 'mypassword2');
 ```
 
 
 #### Testing a select
 
 ```sql
+use db_example;
 select * from user;
 ```
 
