@@ -7,7 +7,9 @@ import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
+import com.example.EProduct;
 
+import org.hibernate.cfg.Configuration;
 
 
 public class HibernateUtil {
@@ -16,8 +18,16 @@ public class HibernateUtil {
 
     static {
             try {
+            	
+            		//Configuration config = new Configuration();
+        			//config.configure("hibernate.cfg.xml");
+        			//config.addAnnotatedClass(EProduct.class);
+        			//config.addResource("EProduct.hbm.xml");
                     StandardServiceRegistry standardRegistry = new StandardServiceRegistryBuilder()
                                     .configure("hibernate.cfg.xml").build();
+                    
+                   
+            		// Comment this out
                     Metadata metaData = new MetadataSources(standardRegistry).getMetadataBuilder().build();
                     sessionFactory = metaData.getSessionFactoryBuilder().build();
             } catch (Throwable th) {

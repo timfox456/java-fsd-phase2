@@ -55,7 +55,19 @@ public class InitHibernate extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		PrintWriter out = response.getWriter();
+		
+		String fname = request.getParameter("fname");
+		String lname = request.getParameter("lname");
+        out.println("<html><body>");
+        out.println("Hello there, " + fname + " " + lname + "<br>");
+        out.println("<a href='index.jsp'>Return to Main Screen</a><br>");
+        out.println("</body></html>");
+
+		
+		
+		
+		//doGet(request, response);
 	}
 
 }

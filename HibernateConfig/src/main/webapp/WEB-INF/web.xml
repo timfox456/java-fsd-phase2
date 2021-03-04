@@ -15,8 +15,17 @@
     <servlet-name>InitHibernate</servlet-name>
     <servlet-class>InitHibernate</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>ListProducts</servlet-name>
+    <servlet-class>ListProducts</servlet-class>
+  </servlet>
+
   <servlet-mapping>
     <servlet-name>InitHibernate</servlet-name>
     <url-pattern>/init</url-pattern>
+  </servlet-mapping>
+ <servlet-mapping>
+    <servlet-name>ListProducts</servlet-name>
+    <url-pattern>/list</url-pattern>
   </servlet-mapping>
 </web-app>	
