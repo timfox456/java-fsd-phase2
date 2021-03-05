@@ -82,6 +82,12 @@ public class PetsServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+
+        PrintWriter out = response.getWriter();
+        out.println("<html><body>");
+        out.println("<b>Adding Pet</b> " + request.getParameter("name") + "<br>");
+        out.println("</body></html>");
+
+		//doGet(request, response);
 	}
 }

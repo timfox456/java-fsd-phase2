@@ -5,7 +5,7 @@ import java.sql.Statement;
 
 public class JDBCExample {
 
-    private String url = "jdbc:mysql://localhost:3306/db_example";
+        private String url = "jdbc:mysql://localhost:3306/db_example";
     private String userName = "springuser";
     private String passWord = "ThePassword";
 
