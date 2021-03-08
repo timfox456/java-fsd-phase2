@@ -22,6 +22,13 @@ The actual front-end design (html/css) can be very minimalistic and design is un
 
 We also need to have a user table that will be stored in the database using hibernate.
 
+You should also document your design (as you have done in previous projects). That should include:
+ * A discussion of your overall design of your application
+ * Any diagrams that help illustrate your project structure
+ * An overview of the data layer including DDL and any diagrams that may be helpful in showing the structure of the data layer.
+ * A step-by-step document that showed the development of your application
+ * User's guide discussing how to test and/or run your application (helpful for the grader)
+
 When user is directed to authenticate:
  * Retrieve the user from the users table using hibernate
  * confirm the password.
