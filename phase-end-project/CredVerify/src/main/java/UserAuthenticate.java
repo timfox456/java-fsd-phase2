@@ -17,16 +17,16 @@ import com.example.HibernateUtil;
 import com.example.User;
 
 /**
- * Servlet implementation class UserRegister
+ * Servlet implementation class UserAuthenticate
  */
 @WebServlet
-public class UserRegister extends HttpServlet {
+public class UserAuthenticate extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public UserRegister() {
+    public UserAuthenticate() {
         super();
         // TODO Auto-generated constructor stub
     }

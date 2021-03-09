@@ -15,10 +15,20 @@
     <servlet-name>UserRegister</servlet-name>
     <servlet-class>UserRegister</servlet-class>
   </servlet>
-
+  <servlet>
+    <description></description>
+    <display-name>UserAuthenticate</display-name>
+    <servlet-name>UserAuthenticate</servlet-name>
+    <servlet-class>UserAuthenticate</servlet-class>
+  </servlet>
+ 
   <servlet-mapping>
     <servlet-name>UserRegister</servlet-name>
     <url-pattern>/register</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UserAuthenticate</servlet-name>
+  	<url-pattern>/login</url-pattern>
   </servlet-mapping>
  
 </web-app>	
