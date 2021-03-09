@@ -86,7 +86,14 @@ public class PetsServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         out.println("<html><body>");
         out.println("<b>Adding Pet</b> " + request.getParameter("name") + "<br>");
+        out.println("<a href='index.jsp'>Return to Main</a><br>");
         out.println("</body></html>");
+        
+        
+        
+        //TODO: Take all parameters from post, and use hibernate to insert new pet.
+        // Then you need to print out some confirmation as to the the success/failure.
+        // You also need to validate your input and not allow missing / NULL data.
 
 		//doGet(request, response);
 	}
