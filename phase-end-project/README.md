@@ -18,7 +18,9 @@ There will be several pages in this application: (this is a suggestion, you can 
  * Login Form (could be part of the index if you want)
  * Landing Page once user has successfully authenticated (content of this page not important), should have a link or button to "log out" back to index.
 
-The actual front-end design (html/css) can be very minimalistic and design is unimportant as we have not really learned much about front-end coding.
+The actual front-end design (html/css) can be very minimalistic and design is unimportant as we have not really learned much about front-end coding. You
+are welcome to any front-end libraries (javascript/css/etc), including bootstrap, jquery, reveal, etc.  Any front-end libraries should be properly licensed
+and have permission to use (common libraries like jquery or bootstrap are open-source and would not be a problem).
 
 We also need to have a user table that will be stored in the database using hibernate.
 
